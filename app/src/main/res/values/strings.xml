@@ -3,6 +3,6 @@
     <string name="add_task">Add Task</string>
 
     <!-- Overflow Menu Strings-->
-    <string name="select_all">Select All</string>
-    <string name="deselect_all">Deselect All</string>
+    <string name="select_all">Check All</string>
+    <string name="deselect_all">Uncheck All</string>
 </resources>
