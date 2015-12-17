@@ -25,8 +25,9 @@ public class MyTaskActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_task);
-        Button button = (Button) findViewById(R.id.taskButton) ;
-        button.setOnClickListener(new View.OnClickListener() {
+        Button addTaskButton = (Button) findViewById(R.id.taskButton);
+
+        addTaskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText t = (EditText) findViewById(R.id.taskName);
@@ -43,6 +44,8 @@ public class MyTaskActivity extends AppCompatActivity {
                 }
             }
         });
+
+
         mRecyclerView = (RecyclerView) findViewById(R.id.task_recycler_view);
         mTaskList = new ArrayList<>();
         mRecyclerView.setHasFixedSize(true);
