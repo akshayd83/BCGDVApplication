@@ -1,4 +1,4 @@
-# Simple Application to add Tasks
+# Basic Application to add Tasks(Notes).
 
-## Use Of RecyclerViewAdapter
+   Uses Of RecyclerView to populate task
 
