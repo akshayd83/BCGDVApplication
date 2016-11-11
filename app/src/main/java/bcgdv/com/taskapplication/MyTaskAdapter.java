@@ -8,6 +8,7 @@ package bcgdv.com.taskapplication;
 import java.util.ArrayList;
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +51,7 @@ public class MyTaskAdapter extends RecyclerView.Adapter<MyTaskAdapter.ViewHolder
         // create a new view
         mContext = parent.getContext();
         View v = LayoutInflater.from(mContext).inflate(R.layout.task_list_view, parent, false);
-        // set the view's size, margins, paddings and layout parameters
+        // set the view's size, margins, padding and layout parameters
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
@@ -68,7 +69,7 @@ public class MyTaskAdapter extends RecyclerView.Adapter<MyTaskAdapter.ViewHolder
         //update the row color based on task status
         //green if done , white if clear
         if (taskStatus) {
-            holder.myTaskLayout.setBackgroundColor(mContext.getResources().getColor(R.color.green));
+            holder.myTaskLayout.setBackgroundColor(ContextCompat.getColor(mContext, R.color.green));
         } else {
             holder.myTaskLayout.setBackgroundColor(Color.WHITE);
         }
@@ -77,7 +78,7 @@ public class MyTaskAdapter extends RecyclerView.Adapter<MyTaskAdapter.ViewHolder
             public void onClick(View v) {
                 if (holder.taskCheckBox.isChecked()) {
                     mDataset.get(position).setStatus(true);
-                    holder.myTaskLayout.setBackgroundColor(mContext.getResources().getColor(R.color.green));
+                    holder.myTaskLayout.setBackgroundColor(ContextCompat.getColor(mContext, R.color.green));
                     holder.taskCheckBox.setChecked(mDataset.get(position).getStatus());
                 } else {
                     mDataset.get(position).setStatus(false);

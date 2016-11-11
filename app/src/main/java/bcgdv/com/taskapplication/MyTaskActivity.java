@@ -32,7 +32,7 @@ public class MyTaskActivity extends AppCompatActivity {
             public void onClick(View v) {
                 EditText t = (EditText) findViewById(R.id.taskName);
                 String s = t.getText().toString();
-                if (s.isEmpty()) {
+                if (s.trim().equals("")) {
                     Toast.makeText(getBaseContext(), "enter the task description first!!",
                             Toast.LENGTH_LONG).show();
                 } else {
