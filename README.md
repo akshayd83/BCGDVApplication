@@ -1,4 +1,4 @@
-## Simple Application to add Tasks
+# Simple Application to add Tasks
 
-# Use Of RecyclerViewAdapter
+## Use Of RecyclerViewAdapter
 
